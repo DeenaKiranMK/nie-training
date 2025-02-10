@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Budget Tracker</h1>
+
+    <!-- Balance Section -->
+    <div class="balance-section">
+      <h2>Current Balance: <span id="balance">0</span></h2>
+    </div>
+
+    <!-- Form to Add Income/Expense -->
+    <div class="form-section">
+      <input type="text" id="description" placeholder="Description" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <input type="date" id="date" required>
+      <select id="category">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <select id="sub-category">
+        <!-- Example categories for income and expenses -->
+        <option value="Salary">Salary</option>
+        <option value="Freelance">Freelance</option>
+        <option value="Rent">Rent</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Entertainment">Entertainment</option>
+      </select>
+      <button id="add-transaction">Add Transaction</button>
+    </div>
+
+    <!-- Transactions List -->
+    <h2>Transactions</h2>
+    <ul id="transaction-list"></ul>
+    <p id="message"></p> <!-- Message will display if expenses exceed income -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
